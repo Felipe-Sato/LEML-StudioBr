@@ -15,19 +15,19 @@ namespace LEML_StudioBr.Forms
     {
         public frmInfoAgente(Agente Ag) : base(Ag)
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
-        protected override void LoadElemento(Elemento Ele)
+        public override void LoadElemento(Elemento Ele)
         {
             base.LoadElemento(Ele);
-            
+
             Agente Ag = (Agente)Ele;
             //txtWhat.Text = Ag.TopText;
             //txtHow.Text = Ag.BottomText;
         }
 
-        protected override void SaveElemento()
+        public override void SaveElemento()
         {
             base.SaveElemento();
 
@@ -35,12 +35,12 @@ namespace LEML_StudioBr.Forms
             theEle.BottomText = txtHow.Text;
         }
 
-        protected override void txtWhat_Enter(object sender, EventArgs e)
+        public override void txtWhat_Enter(object sender, EventArgs e)
         {
             (sender as TextBox).BackColor = Color.LightBlue;
         }
 
-        protected override void txtWhat_Leave(object sender, EventArgs e)
+        public override void txtWhat_Leave(object sender, EventArgs e)
         {
             (sender as TextBox).BackColor = Color.LightGray;
         }

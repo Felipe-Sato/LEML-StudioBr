@@ -26,24 +26,24 @@ namespace LEML_StudioBr.Forms
             //txtHow.Text = Ele.BottomText;
         }
 
-        protected virtual void LoadElemento(Elemento Ele)
+        public virtual void LoadElemento(Elemento Ele)
         {
             txtWhat.Text = Ele.TopText;
             txtHow.Text = Ele.BottomText;
         }
 
-        protected virtual void SaveElemento()
+        public virtual void SaveElemento()
         {
             theEle.TopText = txtWhat.Text;
             theEle.BottomText = txtHow.Text;
         }
 
-        protected virtual void txtWhat_Enter(object sender, EventArgs e)
+        public virtual void txtWhat_Enter(object sender, EventArgs e)
         {
             (sender as TextBox).BackColor = Color.LightYellow;
         }
 
-        protected virtual void txtWhat_Leave(object sender, EventArgs e)
+        public virtual void txtWhat_Leave(object sender, EventArgs e)
         {
             (sender as TextBox).BackColor = Color.White;
         }
